@@ -49,12 +49,12 @@ df['label_encoded'] = le.fit_transform(df['categorical_column'])
 from sklearn.preprocessing import StandardScaler
 
 scaler = StandardScaler()
-df[['feature1', 'feature2']] = scaler.fit_transform(df[['feature1', 'feature2']])
+df[['feature2', 'feature1']] = scaler.fit_transform(df[['feature2', 'feature1']])
 ```
 
 ### 7. **Split Features and Target**
 ```python
-X = df.drop('target_column', axis=1)
+X = df.drop('target_column', axis=2)
 y = df['target_column']
 ```
 </details>
